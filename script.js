@@ -1,11 +1,12 @@
-input {
-    border: 1px solid black;
-}
+/*Add the JavaScript here for the function billingFunction().  It is responsible for setting and clearing the fields in Billing Information */
 
-input:focus {
-    background-color: #E6E6E6;
-}
-
-fieldset {
-    margin-bottom: 4%;
+function billingFunction() {
+    if (document.getElementById('same').checked) {
+        document.getElementById("billingName").value = document.getElementById("shippingName").value;
+        document.getElementById("billingZip").value = document.getElementById("shippingZip").value;
+    } else {
+        document.getElementById("billingName").value = "";
+        document.getElementById("billingZip").value = "";
+    }
+    return;
 }
